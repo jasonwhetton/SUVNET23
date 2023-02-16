@@ -1,14 +1,14 @@
-﻿using System;
-using Xunit;
-using Lab01.Domain;
-using static Lab01.Domain.Playlist;
-using System.Collections.Generic;
-using System.Collections;
-using System.Linq;
-using FluentAssertions;
+﻿using Xunit;
 namespace Lab01.Domain.Tests
 {
     public class PlaylistTests
     {
+        [Fact]
+        public void Active_when_created()
+        {
+            var playlist = new Playlist();
+
+            Assert.True(playlist.IsActive);
+        }
     }
 }
